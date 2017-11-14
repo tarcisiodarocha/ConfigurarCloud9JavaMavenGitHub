@@ -21,6 +21,7 @@ Dicas de como configurar um workspace do Cloud9 para desenvolvimento Java com o 
 * No terminal Linux do workspace execute os dois comandos:
 
     sudo apt-get update
+    
     sudo apt-get install default-jdk
 
 O primeiro dispara uma atualização da base de pacotes do Linux e o segundo instala o Java Development Kit default.
