@@ -18,8 +18,8 @@ Dicas de como configurar um workspace do Cloud9 para desenvolvimento Java com o 
 
 * No terminal Linux do workspace execute os dois comandos:
 
-    	sudo apt-get update
-       	sudo apt-get install default-jdk
+        sudo apt-get update
+        sudo apt-get install default-jdk
 
 O primeiro dispara uma atualização da base de pacotes do Linux e o segundo instala o Java Development Kit default.
 
@@ -46,8 +46,8 @@ O primeiro dispara uma atualização da base de pacotes do Linux e o segundo ins
 
 * Dentro do diretório "/home/ubuntu/workspace", crie um novo diretório para os projetos da disciplina. É nesse diretório que ficarão os projetos/exemplos trabalhados durante a disciplina. Exemplo:
  
-   	cd /home/ubuntu/workspace
-   	mkdir sistemas-distribuidos
+        cd /home/ubuntu/workspace
+        mkdir sistemas-distribuidos
     
 Com os passos anteriores, temos o workspace do Cloud9 já configurado para o desesenvolvimento Java + Maven. Não será necessário instalar o git, pois ele já vem instalado por default no Cloud9. 
 
