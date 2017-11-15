@@ -20,15 +20,15 @@ Dicas de como configurar um workspace do Cloud9 para desenvolvimento Java com o 
 
 * No terminal Linux do workspace execute os dois comandos:
 
-    sudo apt-get update
+    	sudo apt-get update
     
-    sudo apt-get install default-jdk
+    	sudo apt-get install default-jdk
 
 O primeiro dispara uma atualização da base de pacotes do Linux e o segundo instala o Java Development Kit default.
 
 * Teste para ver se o compilador java foi instalado com o comando:
 
-    javac -version
+    	javac -version
   
   Esse comando deve exibir a versão do compilador.
   
@@ -37,23 +37,25 @@ O primeiro dispara uma atualização da base de pacotes do Linux e o segundo ins
 * No terminal linux execute os seguintes comandos:
 
   # Atualizar base de pacotes
-    sudo apt-get update
+    	sudo apt-get update
   # Remover versão 2 do Maven
-    sudo apt-get remove maven2
+    	sudo apt-get remove maven2
   # Instalar nova versão do Maven
-    sudo apt-get install maven
+    	sudo apt-get install maven
   # Criar a variável MAVEN_OPTS
-    export MAVEN_OPTS="-Xmx256m"
+    	export MAVEN_OPTS="-Xmx256m"
 
 # 6. Criação do Diretório de Projetos da Disciplina no Cloud9
 
 * Dentro do diretório "/home/ubuntu/workspace", crie um novo diretório para os projetos da disciplina. Exemplo:
-    cd /home/ubuntu/workspace
-    mkdir sistemas-distribuidos
     
-  É nesse diretório que ficarão os projetos/exemplos trabalhados durante a disciplina. 
+    	cd /home/ubuntu/workspace
     
-Com os passos anteriores, temos o workspace do Cloud9 já configurado para o desesenvolvimento Java + Maven. Não será necessário instalar o git, pois ele já vem instalado por default no Cloud9. 
+    	mkdir sistemas-distribuidos
+    
+	É nesse diretório que ficarão os projetos/exemplos trabalhados durante a disciplina. 
+    
+	Com os passos anteriores, temos o workspace do Cloud9 já configurado para o desesenvolvimento Java + Maven. Não será necessário instalar o git, pois ele já vem instalado por default no Cloud9. 
 
 Os próximos passos dizem respeito a um teste básico de uso desse ambiente confirurado, envolvendo a clonagem de um repositório do GitHub com um projeto Java/Maven já existente, compilação e execução desse projeto no Cloud9.  
 
