@@ -1,22 +1,22 @@
 Dicas de como configurar um workspace do Cloud9 para desenvolvimento Java com o Maven e o GitHub para as aulas de Tarcisio Rocha (Prof. do DCOMP/UFS)
 
-# Criação de uma conta no GitHub
+# 1. Criação de uma conta no GitHub
 
 * Usando o seu email "@dcomp.ufs.br", crie uma conta gratuita em https://github.com/  
 
-# Convite do Prof. Tarcisio para participar de time no Cloud9
+# 2. Convite do Prof. Tarcisio para participar de time no Cloud9
 
 * Certifique-se de que você recebeu um convite pelo seu email "@dcomp.ufs.br" para integrar o time no Cloud9 chamado "DCOMP/UFS - Prof. Tarcisio Rocha". Aceite o convite do e-mail e crie a sua nova conta no Cloud9 a partir deste convite escolhendo o perfil "Student/Coursework" durante o processo e use um nome de usuário que inclua o seu nome e sobrenome.
 
 * Caso não tenha recebido o convite, solicite ao prof. Tarcisio
 
-# Criar workspace Cloud9 no time  
+# 3. Criar workspace Cloud9 no time  
 
 * Na sua conta do Cloud9 (https://c9.io/), vá à seção "Your team subscriptions" e clique clique no nome do time "DCOMP/UFS - Prof. Tarcisio Rocha" listado.
 
 * Crie um novo workspace dentro do contexto do time selecionado. Para tanto, clique no símbolo "+" no menu superior da tela.  Dê um nome ao workspace (ex: "sd-dcomp-ufs"). Escolha o time "DCOMP/UFS - Prof. Tarcisio Rocha". Marque o workspace como "Private". Escolha o template "Blank". Clique "Create workspace". Aguarde a criação e o carregamento do seu workspace.
 
-# Configurando o workspace para desenvolvimento Java
+# 4. Configurando o workspace para desenvolvimento Java
 
 * No terminal Linux do workspace execute os dois comandos:
 
@@ -32,7 +32,7 @@ O primeiro dispara uma atualização da base de pacotes do Linux e o segundo ins
   
   Esse comando deve exibir a versão do compilador.
   
-# Configurando o Maven no workspace  
+# 5. Configurando o Maven no workspace  
 
 * No terminal linux execute os seguintes comandos:
 
@@ -45,7 +45,19 @@ O primeiro dispara uma atualização da base de pacotes do Linux e o segundo ins
   # Criar a variável MAVEN_OPTS
     export MAVEN_OPTS="-Xmx256m"
 
-  
+# 6. Criação do Diretório de Projetos da Disciplina no Cloud9
+
+* Dentro do diretório "/home/ubuntu/workspace", crie um novo diretório para os projetos da disciplina. Exemplo:
+    cd /home/ubuntu/workspace
+    mkdir sistemas-distribuidos
+    
+  É nesse diretório que ficarão os projetos/exemplos trabalhados durante a disciplina. 
+    
+Com os passos anteriores, temos o workspace do Cloud9 já configurado para o desesenvolvimento Java + Maven. Não será necessário instalar o git, pois ele já vem instalado por default no Cloud9. 
+
+Os próximos passos dizem respeito a um teste básico de uso desse ambiente confirurado, envolvendo a clonagem de um repositório do GitHub com um projeto Java/Maven já existente, compilação e execução desse projeto no Cloud9.  
+
+
 # Link ExemploTCP
 
 https://classroom.github.com/a/N0HarabO
