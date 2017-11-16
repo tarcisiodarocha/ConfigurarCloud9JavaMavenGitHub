@@ -44,7 +44,7 @@ O primeiro dispara uma atualização da base de pacotes do Linux e o segundo ins
 
 # 6. Criação do Diretório de Projetos da Disciplina no Cloud9
 
-* Dentro do diretório "/home/ubuntu/workspace", crie um novo diretório para os projetos da disciplina. É nesse diretório que ficarão os projetos/exemplos trabalhados durante a disciplina. Exemplo:
+* No diretório "/home/ubuntu/workspace", crie um novo diretório para os projetos da disciplina. É nesse diretório que ficarão os projetos/exemplos trabalhados durante a disciplina. Exemplo:
  
         cd /home/ubuntu/workspace
         mkdir sistemas-distribuidos
@@ -53,7 +53,44 @@ Com os passos anteriores, temos o workspace do Cloud9 já configurado para o des
 
 Os próximos passos dizem respeito a um teste básico de uso desse ambiente configurado, envolvendo a criação de um novo projeto Java/Maven no Cloud9 com integração com um novo repositório correspondente no GitHub.  
 
-# 7. 
+# 7. Criação de um Novo Projeto Maven no Cloud9
+
+* Entre no diretório de projetos da disciplina. Exemplo:
+
+        cd /home/ubuntu/workspace/sistemas-distribuídos
+
+* A partir desse diretorio, crie um novo projeto Maven usando o seguinte comando (Na prática o parâmetro -DgroupId indicará o pacote Java que o Maven criará inicialmente para o projeto, nesse caso o pacote será "br.ufs.dcomp.MeuProjetoTeste". O parâmetro -DartifactId indica o nome do projeto, no caso "MeuProjetoTeste"):
+
+        mvn -B archetype:generate \
+                -DarchetypeGroupId=org.apache.maven.archetypes \
+                -DgroupId=br.ufs.dcomp.MeuProjeto \
+                -DartifactId=MeuProjetoTeste
+
+Observe que depois da execução desse comando, o Maven cria uma pasta para o projeto chamada MeuProjetoTeste que contém a segunte estrutura interna:
+
+        MeuProjetoTeste
+        |-- pom.xml
+        `-- src
+            |-- main
+            |   `-- java
+            |       `-- br
+            |           `-- ufs
+            |               `-- dcomp
+            |                   `-- MeuProjeto
+            |                       `-- App.java
+            `-- test
+                `-- java
+                    `-- br
+                        `-- ufs
+                            `-- dcomp
+                                `-- MeuProjeto
+                                    `-- AppTest.java
+
+O arquivo "pom.xml" gerado possui as informações acerca do projeto necessárias ao Maven incluindo a lista de dependências do mesmo. A pasta "src/main/java" possui a estrutura de diretórios do pacote Java criado (br.ufs.dcomp.MeuProjeto). O arquivo "App.java" consiste em uma aplicação "Hello world" criada pelo Maven que pode ser usada como ponto de partida para o desenvolvimento do projeto. O diretório "src/test/java" possui a aplicação de testes de unidade gerada pelo Maven.
+
+# 8. Criação de um Novo Repositório para o "MeuProjetoTeste" no GitHub
+
+
 
 # Link ExemploTCP
 
