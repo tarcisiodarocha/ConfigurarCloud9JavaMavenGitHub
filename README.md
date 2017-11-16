@@ -88,17 +88,74 @@ Observe que depois da execução desse comando, o Maven cria uma pasta para o pr
 
 O arquivo "pom.xml" gerado possui as informações acerca do projeto necessárias ao Maven incluindo a lista de dependências do mesmo. A pasta "src/main/java" possui a estrutura de diretórios do pacote Java criado (br.ufs.dcomp.MeuProjeto). O arquivo "App.java" consiste em uma aplicação "Hello world" criada pelo Maven que pode ser usada como ponto de partida para o desenvolvimento do projeto. O diretório "src/test/java" possui a aplicação de testes de unidade gerada pelo Maven.
 
-# 8. Criação de um Novo Repositório para o "MeuProjetoTeste" no GitHub
+# 8. Renomeação Temporária do Diretório do Projeto
 
+* Para que não hava confilto de diretórios nas próximas etapas, renomeie o diretório do projeto de "MeuProjetoTeste" para "MeuProjetoTesteTemp" com o segunte comando:
 
+        mv MeuProjetoTeste/ MeuProjetoTesteTemp
 
-# Link ExemploTCP
+# 9. Criação de um Novo Repositório para o "MeuProjetoTeste" no GitHub
 
-https://classroom.github.com/a/N0HarabO
+* Na sua conta do GitHub, crie um novo repositório chamado "MeuProjetoTeste" (em "Your profile" >> "Repositories"). Marque-o como "Private", escolha a opção "Initialize this repository with a README" e crie o repositório. 
 
+* Depois de criado copie o link de clonagem do mesmo (selecione o botão "Clone" e copie o link https). Ex: https://github.com/tarcisiodarocha/MeuProjetoTeste.git
 
+# 10. Clonagem do Repositório GitHub no Cloud9
 
+* A partir do diretório de projetos da disciplina no Cloud9 (ex: "/home/ubuntu/workspace/sistemas-distribuidos/"), clone o repositório do projeto usando como parâmetro o link copiado na etapa anterior: 
+        
+        git clone <link-do-repositorio-no-github>
 
+Exemplo: git clone https://github.com/tarcisiodarocha/MeuProjetoTeste.git
 
+Como parte do processo de clonagem, será criada um diretório com o nome do repositório ("MeuProjetoTeste") com um arquivo texto "README.md". 
 
+# 11. Mover Conteúdo do Diretório "MeuProjetoTesteTemp" (gerado pelo Maven) para o Diretório "MeuProjetoTeste" 
 
+*  A partir do diretório de projetos da disciplina (ex: "/home/ubuntu/workspace/sistemas-distribuidos/") execute o seguinte comando:
+
+        mv MeuProjetoTesteTemp/* MeuProjetoTeste/
+        
+* Depois disso, remova o diretório "MeuProjetoTesteTemp" que agora estará vazio.       
+
+        rmdir MeuProjetoTesteTemp
+        
+Realizadas essas etapas, teremos o projeto Maven gerado já integrado com o repositório que foi clonado do GitHub. Nas próximas etapas serção descritos o processo de compilação do projeto Maven local e a submissão (push) do mesmo para o repositório remoto no GitHub.
+
+# 12. Compilação do Projeto com o Maven
+
+* Entre no diretório do projeto. Exemplo:
+
+        cd /home/ubuntu/workspace/sistemas-distribuidos/MeuProjetoTeste
+
+* A partir daí, compile o projeto com o Maven
+
+        mvn compile
+        
+Como resultado do processo de compilação, teremos o diretório "target/classes" que conterá a estrutura de diretórios do pacote com os ".class" do projeto.
+
+# 13. Execução do App de "Hello world" do Projeto
+
+* A partir do diretório do projeto, execute o App com o seguinte comando:
+
+        java -cp target/classes br.ufs.dcomp.MeuProjeto.App
+        
+Deve ser exibida a mensagem "Hello Word!"
+
+# 14. Commit e Push da Primeira Versão do Projeto
+
+* A partir do diretório do projeto, execute o App com os seguintes comandos:
+
+   # Adicionar os novos arquivos/diretórios inseridos anteriormente no projeto git
+        
+        git add .
+        
+   # Realizar o primeiro commit do projeto no repositório local
+   
+        git commit - "meu primeiro commit no repositório"
+        
+   # Realizar o push do repositório local para o repositório remoto do GitHub
+   
+        git push
+        
+Nesse último comando deve ser fornecido o email usuário e a senha correspondente de sua conta do GitHub. Depois disso, verifique as atualizações no seu repositório GitHub via browser.
