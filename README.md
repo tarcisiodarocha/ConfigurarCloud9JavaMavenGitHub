@@ -152,7 +152,7 @@ Deve ser exibida a mensagem "Hello Word!"
         
    # Realizar o primeiro commit do projeto no repositório local
    
-        git commit - "meu primeiro commit no repositório"
+        git commit -m "meu primeiro commit no repositório"
         
    # Realizar o push do repositório local para o repositório remoto do GitHub
    
