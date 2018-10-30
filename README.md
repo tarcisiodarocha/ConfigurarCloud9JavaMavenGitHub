@@ -4,24 +4,21 @@ Dicas de como configurar um workspace do Cloud9 para desenvolvimento Java com o 
 
 * Usando o seu email "@dcomp.ufs.br", crie uma conta gratuita em https://github.com/  
 
-# 2. Convite do Prof. Tarcisio para participar de time no Cloud9
+# 2. Login no Cloud9 com a conta do GitHub
 
-* Certifique-se de que você recebeu um convite pelo seu email "@dcomp.ufs.br" para integrar o time no Cloud9 chamado "DCOMP/UFS - Prof. Tarcisio Rocha". Aceite o convite do e-mail e crie a sua nova conta no Cloud9 a partir deste convite escolhendo o perfil "Student/Coursework". Durante o processo e use um nome de usuário que inclua o seu nome e sobrenome para facilitar a identificação futura. (Caso não tenha recebido o convite, solicite ao professor.)
+* Acesse https://c9.io/login , clique no símbolo do GitHub e faça login com a conta do GitHub.
 
 # 3. Criar workspace Cloud9 no time  
 
-* Na sua conta do Cloud9 (https://c9.io/), vá à seção "Your team subscriptions" e selecione o nome do time "DCOMP/UFS - Prof. Tarcisio Rocha" listado.
-
-* Crie um novo workspace dentro do contexto do time selecionado. Para tanto, clique no símbolo "+" no menu superior da tela.  Dê um nome ao workspace (ex: "sd-dcomp-ufs"). Escolha o time "DCOMP/UFS - Prof. Tarcisio Rocha". Marque o workspace como "Private". Escolha o template "Blank". Clique "Create workspace". Aguarde a criação e o carregamento do seu workspace.
+* Na sua conta do Cloud9 (https://c9.io/), crie um novo workspace dentro do contexto do time selecionado. Para tanto, clique no símbolo "+" no menu superior da tela.  Dê um nome ao workspace (ex: "sd-dcomp-ufs"). Marque o workspace como "Private". Escolha o template "Blank". Clique "Create workspace". Aguarde a criação e o carregamento do seu workspace.
 
 # 4. Configurando o workspace para desenvolvimento Java
 
-* No terminal Linux do workspace execute os dois comandos:
+* No terminal Linux do workspace execute os comandos:
 
+        sudo add-apt-repository ppa:webupd8team/java
         sudo apt-get update
-        sudo apt-get install default-jdk
-
-O primeiro dispara uma atualização da base de pacotes do Linux e o segundo instala o Java Development Kit default.
+        sudo apt-get install oracle-java8-installer
 
 * Teste para ver se o compilador java foi instalado com o comando:
 
