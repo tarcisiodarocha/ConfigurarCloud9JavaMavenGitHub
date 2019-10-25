@@ -28,10 +28,6 @@ Dicas de como configurar um workspace do Cloud9 para desenvolvimento Java com o 
 
 * No terminal linux execute os seguintes comandos:
 
-  # Atualizar base de pacotes
-    	sudo apt-get update
-  # Remover versão 2 do Maven
-    	sudo apt-get remove maven2
   # Instalar nova versão do Maven
     	sudo apt-get install maven
   # Criar a variável MAVEN_OPTS
