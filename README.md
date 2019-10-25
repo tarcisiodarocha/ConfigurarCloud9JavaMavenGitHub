@@ -16,9 +16,7 @@ Dicas de como configurar um workspace do Cloud9 para desenvolvimento Java com o 
 
 * No terminal Linux do workspace execute os comandos:
 
-        sudo add-apt-repository ppa:webupd8team/java
-        sudo apt-get update
-        sudo apt-get install oracle-java8-installer
+        sudo apt-get install default-jdk
 
 * Teste para ver se o compilador java foi instalado com o comando:
 
