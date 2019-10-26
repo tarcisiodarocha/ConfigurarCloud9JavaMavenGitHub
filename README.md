@@ -79,6 +79,13 @@ Observe que depois da execução desse comando, o Maven cria uma pasta para o pr
 
 O arquivo "pom.xml" gerado possui as informações acerca do projeto necessárias ao Maven incluindo a lista de dependências do mesmo. A pasta "src/main/java" possui a estrutura de diretórios do pacote Java criado (br.ufs.dcomp.MeuProjeto). O arquivo "App.java" consiste em uma aplicação "Hello world" criada pelo Maven que pode ser usada como ponto de partida para o desenvolvimento do projeto. O diretório "src/test/java" possui a aplicação de testes de unidade gerada pelo Maven.
 
+# 7.1 Inserir propriedades no pom.xml
+
+     <properties>
+         <maven.compiler.source>1.8</maven.compiler.source>
+         <maven.compiler.target>1.8</maven.compiler.target>
+     </properties>
+
 # 8. Renomeação Temporária do Diretório do Projeto
 
 * Para que não hava confilto de diretórios nas próximas etapas, renomeie o diretório do projeto de "MeuProjetoTeste" para "MeuProjetoTesteTemp" com o segunte comando:
